@@ -389,7 +389,7 @@ const server = http.createServer((req: http.IncomingMessage, res: http.ServerRes
 
 // Start the server
 const PORT: number = parseInt(process.env.PORT || '3000', 10);
-const HOST: string = 'localhost';
+const HOST: string = process.env.HOST || '0.0.0.0';
 
 server.listen(PORT, HOST, () => {
   console.log(`🚀 Server is running at http://${HOST}:${PORT}`);
